@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d07650e6-54e0-44fc-8418-d9777163ac29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/adapter/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/adapter/mongo/MongoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/OrderItemDomain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/exception/DomainException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/type/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderStatusAcceptPortImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderStatusRefusedPortImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/interfaces/OrderStatusPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/request/OrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/response/OrderResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/service/mapper/OrderMapper.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZcTzgNhf9RFqAlJUQ6NijsdDYQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SimulacaoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.store.order.SimulacaoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d07650e6-54e0-44fc-8418-d9777163ac29" name="Default Changelist" comment="" />
+      <created>1585137646478</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585137646478</updated>
+      <workItem from="1585137651120" duration="7664000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2688" y="250" width="374" height="577" key="#com.intellij.ide.util.MemberChooser" timestamp="1585263289185">
+      <screen x="62" y="27" width="3778" height="1053" />
+    </state>
+    <state x="2688" y="250" width="374" height="577" key="#com.intellij.ide.util.MemberChooser/62.27.3778.1053@62.27.3778.1053" timestamp="1585263289185" />
+    <state x="2399" y="466" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585267532525">
+      <screen x="62" y="27" width="3778" height="1053" />
+    </state>
+    <state x="2399" y="466" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/62.27.3778.1053@62.27.3778.1053" timestamp="1585267532525" />
+    <state x="2606" y="15" width="538" height="1047" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585267796784">
+      <screen x="62" y="27" width="3778" height="1053" />
+    </state>
+    <state x="2606" y="15" width="538" height="1047" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.27.3778.1053@62.27.3778.1053" timestamp="1585267796784" />
+    <state x="2613" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585265372196">
+      <screen x="62" y="27" width="3778" height="1053" />
+    </state>
+    <state x="2613" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.27.3778.1053@62.27.3778.1053" timestamp="1585265372196" />
+  </component>
+</project>
