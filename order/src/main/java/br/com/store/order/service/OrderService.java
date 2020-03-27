@@ -19,6 +19,7 @@ public class OrderService {
 
     public OrderResponse createOrder(OrderRequest request){
         OrderDomain orderDomain = orderMapper.mapToDomain(request, repository);
+        orderDomain.createOrder();
         OrderResponse response = orderMapper.mapToResponse(orderDomain);
         return response;
     }

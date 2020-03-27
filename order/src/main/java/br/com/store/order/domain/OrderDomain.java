@@ -29,13 +29,13 @@ public class OrderDomain {
 
     private List<OrderRequest.OrderItemRequest> items;
 
-    public OrderDomain createOrder(OrderDomain order) {
-        return repository.save(order);
+    public OrderDomain createOrder() {
+        return repository.save(this);
     }
 
-    public OrderDomain complete(OrderDomain order) {
+    public OrderDomain complete() {
         validateStatus();
-        return repository.save(order);
+        return repository.save(this);
     }
 
     void validateStatus() {
