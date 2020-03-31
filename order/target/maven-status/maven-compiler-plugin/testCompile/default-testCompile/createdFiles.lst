@@ -1,0 +1,2 @@
+br/com/store/order/application/messaging/OrderSend.class
+br/com/store/order/application/messaging/Producer.class

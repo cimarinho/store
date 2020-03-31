@@ -2,15 +2,110 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d07650e6-54e0-44fc-8418-d9777163ac29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_2_2_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/OrderPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/request/PaymentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/LogDomain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/repository/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/DomainRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/MongoLogDomainRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/MongoOrderDomainRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ProducerCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ProducerPaymentComple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ProducerPaymentRefused.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_confluent_kafka_avro_serializer_4_0_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order.iml" beforeDir="false" afterPath="$PROJECT_DIR$/order.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/adapter/Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/adapter/mongo/MongoRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/OrderDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/OrderDomain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderStatusAcceptPortImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderStatusAcceptPortImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/exception/DomainException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/exception/DomainException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/type/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/type/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderPortImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/OrderCreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderStatusAcceptPortImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderStatusRefusedPortImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/OrderStatusRefusedPortImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/interfaces/OrderPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/interfaces/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/interfaces/OrderStatusPort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/request/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/request/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/response/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/response/OrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/service/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/SimulacaoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/adapter/Repository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/adapter/mongo/MongoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/OrderDomain$OrderDomainBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/OrderDomain$OrderDomainBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/OrderDomain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/OrderDomain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/exception/DomainException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/exception/DomainException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/type/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/type/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/OrderPortImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/OrderStatusAcceptPortImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/OrderStatusRefusedPortImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/interfaces/OrderPort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/interfaces/OrderStatusPort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/request/OrderRequest$OrderItemRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/request/OrderRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/response/OrderResponse$OrderItemRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/response/OrderResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/service/OrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/service/mapper/OrderMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/service/mapper/OrderMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/store/order/service/mapper/OrderMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/store/order/domain/mapper/OrderMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/store/order/SimulacaoApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="order@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="order@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="order: schema" type="f0f64354:MongoImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="order@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="order: schema" type="f0f64354:MongoImplModel$Schema" />
+        <item name="order: table" type="531e99d1:MongoImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="order@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="order: schema" type="f0f64354:MongoImplModel$Schema" />
+        <item name="order: table" type="531e99d1:MongoImplModel$Table" />
+        <item name="_id: column" type="a4155d2c:MongoImplModel$TableColumn" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,14 +125,22 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZcTzgNhf9RFqAlJUQ6NijsdDYQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mongo" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -46,8 +149,74 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.store.order.domain.mapper" />
+      <recent name="br.com.store.order.domain" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.store.order.domain.exception" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ProducerCreate">
+    <configuration name="OrderSend" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.store.order.application.messaging.OrderSend" />
+      <module name="order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.store.order.application.messaging.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerCreate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.store.order.application.messaging.ProducerCreate" />
+      <module name="order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.store.order.application.messaging.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerPaymentComple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.store.order.application.messaging.ProducerPaymentComple" />
+      <module name="order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.store.order.application.messaging.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerPaymentRefused" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.store.order.application.messaging.ProducerPaymentRefused" />
+      <module name="order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.store.order.application.messaging.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimulacaoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="order" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.store.order.SimulacaoApplication" />
@@ -55,6 +224,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProducerCreate" />
+        <item itemvalue="Application.ProducerPaymentComple" />
+        <item itemvalue="Application.ProducerPaymentRefused" />
+        <item itemvalue="Application.OrderSend" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.1609756" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="order@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="order@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@1edf1791" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="order@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@5656e018" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -67,6 +272,13 @@
       <option name="presentableId" value="Default" />
       <updated>1585137646478</updated>
       <workItem from="1585137651120" duration="7909000" />
+      <workItem from="1585416559580" duration="6016000" />
+      <workItem from="1585488501019" duration="5700000" />
+      <workItem from="1585601442663" duration="2923000" />
+      <workItem from="1585609928429" duration="194000" />
+      <workItem from="1585610138480" duration="1835000" />
+      <workItem from="1585612009210" duration="185000" />
+      <workItem from="1585612218013" duration="2468000" />
     </task>
     <servers />
   </component>
@@ -74,21 +286,118 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2688" y="250" width="374" height="577" key="#com.intellij.ide.util.MemberChooser" timestamp="1585263289185">
-      <screen x="62" y="27" width="3778" height="1053" />
+    <state x="2440" y="136" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585613362184">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2440" y="136" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585613362184" />
+    <state x="3255" y="229" width="343" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1585418752289">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="3255" y="229" width="343" height="592" key="#com.intellij.ide.util.MemberChooser/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585418752289" />
     <state x="2688" y="250" width="374" height="577" key="#com.intellij.ide.util.MemberChooser/62.27.3778.1053@62.27.3778.1053" timestamp="1585263289185" />
-    <state x="2399" y="466" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585267532525">
-      <screen x="62" y="27" width="3778" height="1053" />
+    <state x="2857" y="450" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585417728854">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2857" y="450" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585417728854" />
     <state x="2399" y="466" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/62.27.3778.1053@62.27.3778.1053" timestamp="1585267532525" />
-    <state x="2606" y="15" width="538" height="1047" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585267796784">
-      <screen x="62" y="27" width="3778" height="1053" />
+    <state x="2620" y="398" width="511" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585417812864">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2620" y="398" width="511" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585417812864" />
+    <state x="2633" y="420" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1585417730471">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2633" y="420" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585417730471" />
+    <state x="3213" y="0" width="359" height="1074" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585418439735">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="3213" y="0" width="359" height="1074" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585418439735" />
     <state x="2606" y="15" width="538" height="1047" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.27.3778.1053@62.27.3778.1053" timestamp="1585267796784" />
-    <state x="2613" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585265372196">
-      <screen x="62" y="27" width="3778" height="1053" />
+    <state x="3216" y="268" width="370" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585490308101">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="3216" y="268" width="370" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585490308101" />
     <state x="2613" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.27.3778.1053@62.27.3778.1053" timestamp="1585265372196" />
+    <state x="2407" y="238" key="#xdebugger.evaluate" timestamp="1585614530970">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2407" y="238" key="#xdebugger.evaluate/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614530970" />
+    <state width="1874" height="246" key="GridCell.Tab.0.bottom" timestamp="1585614694049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.0.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
+    <state width="1874" height="246" key="GridCell.Tab.0.center" timestamp="1585614694048">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.0.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694048" />
+    <state width="1874" height="246" key="GridCell.Tab.0.left" timestamp="1585614694048">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.0.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694048" />
+    <state width="1874" height="246" key="GridCell.Tab.0.right" timestamp="1585614694049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.0.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
+    <state width="1874" height="246" key="GridCell.Tab.1.bottom" timestamp="1585614694049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.1.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
+    <state width="1874" height="246" key="GridCell.Tab.1.center" timestamp="1585614694049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.1.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
+    <state width="1874" height="246" key="GridCell.Tab.1.left" timestamp="1585614694049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.1.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
+    <state width="1874" height="246" key="GridCell.Tab.1.right" timestamp="1585614694049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.1.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
+    <state width="1874" height="246" key="GridCell.Tab.2.bottom" timestamp="1585614690944">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.2.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614690944" />
+    <state width="1874" height="246" key="GridCell.Tab.2.center" timestamp="1585614690944">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.2.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614690944" />
+    <state width="1874" height="246" key="GridCell.Tab.2.left" timestamp="1585614690944">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.2.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614690944" />
+    <state width="1874" height="246" key="GridCell.Tab.2.right" timestamp="1585614690944">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="246" key="GridCell.Tab.2.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614690944" />
+    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1585612817886">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="263" height="500" key="HiddenNamespacesPopup/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585612817886" />
+    <state x="2369" y="174" key="SettingsEditor" timestamp="1585611475176">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2369" y="174" key="SettingsEditor/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585611475176" />
+    <state x="2613" y="347" width="524" height="384" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1585614103036">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2613" y="347" width="524" height="384" key="com.intellij.database.dbimport.ImportUtil.MyDialog/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614103036" />
+    <state x="2731" y="305" width="287" height="468" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1585612470371">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2731" y="305" width="287" height="468" key="com.intellij.database.view.ui.DbObjectDialog/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585612470371" />
+    <state x="2020" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1585603875010">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2020" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585603875010" />
+    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1585490462165">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585490462165" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/order$Producer.ic" NAME="Producer Coverage Results" MODIFIED="1585492424254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.store.order.application.messaging.*</FILTER>
+    </SUITE>
   </component>
 </project>

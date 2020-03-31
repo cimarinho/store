@@ -2,6 +2,6 @@ package br.com.store.order.domain.type;
 
 public enum Status {
 
-    CREATE, COMPLETE, REFUSED;
+    CREATE, APPROVED_SHIPPING, ERROR_ORDER, COMPLETE, ERROR_SHIPPING, ERROR_PAYMENT;
 
 }
