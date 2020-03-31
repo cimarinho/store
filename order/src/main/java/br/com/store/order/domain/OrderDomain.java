@@ -19,7 +19,6 @@ public class OrderDomain {
 
     private Repository<OrderDomain, Long> repository;
 
-
     @Id
     public String id;
 
@@ -51,7 +50,7 @@ public class OrderDomain {
 
     void validateStatus(Status receiveStatus) {
         if (receiveStatus.equals(this.status)) {
-          throw new DomainException("Status invalido para ser completado.");
+          throw new DomainException("Invalid Status.");
         }
     }
 

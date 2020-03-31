@@ -2,68 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d07650e6-54e0-44fc-8418-d9777163ac29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_2_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/OrderPayment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/request/PaymentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/LogDomain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/repository/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/DomainRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/MongoLogDomainRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/MongoOrderDomainRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ProducerCreate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ProducerPaymentComple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ProducerPaymentRefused.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_confluent_kafka_avro_serializer_4_0_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order.iml" beforeDir="false" afterPath="$PROJECT_DIR$/order.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/adapter/Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/adapter/mongo/MongoRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/OrderDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/OrderDomain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/exception/DomainException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/exception/DomainException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/type/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/type/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderPortImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/OrderCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderStatusAcceptPortImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/OrderStatusRefusedPortImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/OrderStatusRefusedPortImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/interfaces/OrderPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/interfaces/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/messaging/interfaces/OrderStatusPort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/request/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/request/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/port/response/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/response/OrderResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/service/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/domain/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/SimulacaoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/adapter/Repository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/adapter/mongo/MongoRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/OrderDomain$OrderDomainBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/OrderDomain$OrderDomainBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/MongoLogDomainRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/MongoLogDomainRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/MongoOrderDomainRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/MongoOrderDomainRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/OrderDomain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/OrderDomain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/exception/DomainException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/exception/DomainException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/type/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/domain/type/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/OrderPortImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/OrderStatusAcceptPortImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/OrderStatusRefusedPortImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/interfaces/OrderPort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/messaging/interfaces/OrderStatusPort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/request/OrderRequest$OrderItemRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/request/OrderRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/response/OrderResponse$OrderItemRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/port/response/OrderResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/service/OrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/service/mapper/OrderMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/service/mapper/OrderMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/store/order/service/mapper/OrderMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/store/order/domain/mapper/OrderMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/store/order/SimulacaoApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/integration/mongo/DomainRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/integration/mongo/MongoLogDomainRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/integration/mongo/MongoLogDomainRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/integration/mongo/MongoOrderDomainRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/integration/mongo/MongoOrderDomainRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,11 +195,6 @@
                 <item name="order@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@1edf1791" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="order@localhost: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@5656e018" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -278,7 +219,9 @@
       <workItem from="1585609928429" duration="194000" />
       <workItem from="1585610138480" duration="1835000" />
       <workItem from="1585612009210" duration="185000" />
-      <workItem from="1585612218013" duration="2468000" />
+      <workItem from="1585612218013" duration="2864000" />
+      <workItem from="1585654280484" duration="858000" />
+      <workItem from="1585680450500" duration="577000" />
     </task>
     <servers />
   </component>
@@ -322,54 +265,54 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2407" y="238" key="#xdebugger.evaluate/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614530970" />
-    <state width="1874" height="246" key="GridCell.Tab.0.bottom" timestamp="1585614694049">
+    <state width="1874" height="246" key="GridCell.Tab.0.bottom" timestamp="1585655063977">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.0.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
-    <state width="1874" height="246" key="GridCell.Tab.0.center" timestamp="1585614694048">
+    <state width="1874" height="246" key="GridCell.Tab.0.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655063977" />
+    <state width="1874" height="246" key="GridCell.Tab.0.center" timestamp="1585655063977">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.0.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694048" />
-    <state width="1874" height="246" key="GridCell.Tab.0.left" timestamp="1585614694048">
+    <state width="1874" height="246" key="GridCell.Tab.0.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655063977" />
+    <state width="1874" height="246" key="GridCell.Tab.0.left" timestamp="1585655063977">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.0.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694048" />
-    <state width="1874" height="246" key="GridCell.Tab.0.right" timestamp="1585614694049">
+    <state width="1874" height="246" key="GridCell.Tab.0.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655063977" />
+    <state width="1874" height="246" key="GridCell.Tab.0.right" timestamp="1585655063977">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.0.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
-    <state width="1874" height="246" key="GridCell.Tab.1.bottom" timestamp="1585614694049">
+    <state width="1874" height="246" key="GridCell.Tab.0.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655063977" />
+    <state width="1874" height="246" key="GridCell.Tab.1.bottom" timestamp="1585655064093">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.1.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
-    <state width="1874" height="246" key="GridCell.Tab.1.center" timestamp="1585614694049">
+    <state width="1874" height="246" key="GridCell.Tab.1.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655064093" />
+    <state width="1874" height="246" key="GridCell.Tab.1.center" timestamp="1585655064093">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.1.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
-    <state width="1874" height="246" key="GridCell.Tab.1.left" timestamp="1585614694049">
+    <state width="1874" height="246" key="GridCell.Tab.1.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655064093" />
+    <state width="1874" height="246" key="GridCell.Tab.1.left" timestamp="1585655064093">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.1.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
-    <state width="1874" height="246" key="GridCell.Tab.1.right" timestamp="1585614694049">
+    <state width="1874" height="246" key="GridCell.Tab.1.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655064093" />
+    <state width="1874" height="246" key="GridCell.Tab.1.right" timestamp="1585655064093">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.1.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614694049" />
-    <state width="1874" height="246" key="GridCell.Tab.2.bottom" timestamp="1585614690944">
+    <state width="1874" height="246" key="GridCell.Tab.1.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655064093" />
+    <state width="1874" height="246" key="GridCell.Tab.2.bottom" timestamp="1585655061982">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.2.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614690944" />
-    <state width="1874" height="246" key="GridCell.Tab.2.center" timestamp="1585614690944">
+    <state width="1874" height="246" key="GridCell.Tab.2.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655061982" />
+    <state width="1874" height="246" key="GridCell.Tab.2.center" timestamp="1585655061982">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.2.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614690944" />
-    <state width="1874" height="246" key="GridCell.Tab.2.left" timestamp="1585614690944">
+    <state width="1874" height="246" key="GridCell.Tab.2.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655061982" />
+    <state width="1874" height="246" key="GridCell.Tab.2.left" timestamp="1585655061982">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.2.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614690944" />
-    <state width="1874" height="246" key="GridCell.Tab.2.right" timestamp="1585614690944">
+    <state width="1874" height="246" key="GridCell.Tab.2.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655061982" />
+    <state width="1874" height="246" key="GridCell.Tab.2.right" timestamp="1585655061982">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="246" key="GridCell.Tab.2.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585614690944" />
+    <state width="1874" height="246" key="GridCell.Tab.2.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585655061982" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1585612817886">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -394,6 +337,17 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585490462165" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/store/order/integration/mongo/MongoOrderDomainRepository.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/order$Producer.ic" NAME="Producer Coverage Results" MODIFIED="1585492424254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
