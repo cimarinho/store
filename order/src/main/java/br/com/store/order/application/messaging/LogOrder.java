@@ -9,13 +9,13 @@ import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.handler.annotation.Headers;
 
 @Slf4j
-//@EnableBinding({OrderInput.class})
+@EnableBinding({OrderInput.class})
 public class LogOrder {
 
 
-//    @StreamListener(OrderInput.SAVE_LOG)
-//    public void completePayment(OrderRequest orderRequest, @Headers MessageHeaders headers) {
-//        log.info("ORDER_LOG = correlation_id["+headers.get("correlation_id")+"");
-//
-//    }
+    @StreamListener(OrderInput.SAVE_LOG)
+    public void completePayment(OrderRequest orderRequest, @Headers MessageHeaders headers) {
+        log.info("ORDER_LOG = correlation_id["+headers.get("correlation_id")+"");
+
+    }
 }
