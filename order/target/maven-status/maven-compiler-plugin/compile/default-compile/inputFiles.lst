@@ -1,6 +1,5 @@
-/home/marcelo/projetos/store/order/src/main/java/br/com/store/order/application/messaging/OrderStatusRefusedImpl.java
-/home/marcelo/projetos/store/order/src/main/java/br/com/store/order/controller/OrderRequetController.java
-/home/marcelo/projetos/store/order/src/main/java/br/com/store/order/application/messaging/OrderCreatePayment.java
+/home/marcelo/projetos/store/order/src/main/java/br/com/store/order/application/controller/OrderRequetController.java
+/home/marcelo/projetos/store/order/src/main/java/br/com/store/order/application/Teste.java
 /home/marcelo/projetos/store/order/src/main/java/br/com/store/order/domain/repository/MongoLogDomainRepository.java
 /home/marcelo/projetos/store/order/src/main/java/br/com/store/order/domain/entity/OrderItemDomain.java
 /home/marcelo/projetos/store/order/src/main/java/br/com/store/order/application/request/OrderItemResponse.java

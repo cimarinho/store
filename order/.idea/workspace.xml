@@ -4,13 +4,26 @@
     <list default="true" id="d07650e6-54e0-44fc-8418-d9777163ac29" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../kafka-streams-examples" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/controller/OrderRequetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/controller/OrderRequetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/LogOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/LogOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/OrderReceiveCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/OrderReceiveCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/interfaces/OrderInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/store/order/application/messaging/interfaces/OrderInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ExampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ExampleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/MyLoggerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/OrderInputTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/OrderReceiveCreateConsumetTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/OrderReceiveCreateTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/TestDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/TestDoc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/mock/CustomKafkaAvroDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/mock/CustomKafkaAvroSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/type/IntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/store/order/application/request/OrderRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/store/order/application/request/OrderRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/store/order/service/mapper/OrderMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/store/order/service/mapper/OrderMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/order-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/order-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/order-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/order-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-kafka-avro" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,35 +120,11 @@
       <recent name="$PROJECT_DIR$/src/main/resources/avro" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SimulacaoApplication">
-    <configuration name="ExampleTest.testWiring" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="All in order" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.store.order.application.messaging.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.com.store.order.application.messaging" />
-      <option name="MAIN_CLASS_NAME" value="br.com.store.order.application.messaging.ExampleTest" />
-      <option name="METHOD_NAME" value="testWiring" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyLoggerApplicationTests.whenSendMessage_thenResponseShouldUpdateText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.store.order.application.messaging.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.com.store.order.application.messaging" />
-      <option name="MAIN_CLASS_NAME" value="br.com.store.order.application.messaging.MyLoggerApplicationTests" />
-      <option name="METHOD_NAME" value="whenSendMessage_thenResponseShouldUpdateText" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,33 +160,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDoc.teste" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.store.order.application.messaging.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.com.store.order.application.messaging" />
-      <option name="MAIN_CLASS_NAME" value="br.com.store.order.application.messaging.TestDoc" />
-      <option name="METHOD_NAME" value="teste" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimulacaoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="order" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.store.order.OrderApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="JUnit.TestDoc" />
+      <item itemvalue="JUnit.All in order" />
+      <item itemvalue="JUnit.TestDoc.testWiring" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestDoc.testWiring" />
-        <item itemvalue="JUnit.ExampleTest.testWiring" />
+        <item itemvalue="JUnit.All in order" />
         <item itemvalue="JUnit.TestDoc" />
       </list>
     </recent_temporary>
@@ -251,10 +222,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2475" y="200" width="800" height="677" key="#Project_Structure/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586025296257" />
-    <state x="2440" y="136" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585613362184">
+    <state x="2440" y="136" width="1056" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586439830227">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2440" y="136" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585613362184" />
+    <state x="2440" y="136" width="1056" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586439830227" />
     <state x="2546" y="344" width="657" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586367203109">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -292,88 +264,88 @@
     <state x="3216" y="268" width="380" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585688466317" />
     <state x="2613" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.27.3778.1053@62.27.3778.1053" timestamp="1585265372196" />
     <state x="3216" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586163950856" />
-    <state x="2201" y="348" width="1260" height="732" key="#xdebugger.evaluate" timestamp="1586426586540">
+    <state x="2201" y="348" width="1260" height="732" key="#xdebugger.evaluate" timestamp="1586438986812">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2213" y="257" width="1486" height="545" key="#xdebugger.evaluate/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586016546925" />
-    <state x="2201" y="348" width="1260" height="732" key="#xdebugger.evaluate/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586426586540" />
+    <state x="2201" y="348" width="1260" height="732" key="#xdebugger.evaluate/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438986812" />
     <state x="2663" y="237" width="424" height="603" key="FileChooserDialogImpl" timestamp="1586437851704">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2663" y="237" width="424" height="603" key="FileChooserDialogImpl/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586437851704" />
     <state x="782" y="258" key="FileChooserDialogImpl/63.27.1857.1053@63.27.1857.1053" timestamp="1586085403910" />
-    <state width="1874" height="223" key="GridCell.Tab.0.bottom" timestamp="1586438616758">
+    <state width="1874" height="333" key="GridCell.Tab.0.bottom" timestamp="1586439766458">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.0.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018348577" />
     <state width="1812" height="340" key="GridCell.Tab.0.bottom/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519328" />
-    <state width="1874" height="223" key="GridCell.Tab.0.bottom/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616758" />
-    <state width="1874" height="223" key="GridCell.Tab.0.center" timestamp="1586438616758">
+    <state width="1874" height="333" key="GridCell.Tab.0.bottom/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586439766458" />
+    <state width="1874" height="333" key="GridCell.Tab.0.center" timestamp="1586439766458">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.0.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018348577" />
     <state width="1812" height="340" key="GridCell.Tab.0.center/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519328" />
-    <state width="1874" height="223" key="GridCell.Tab.0.center/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616758" />
-    <state width="1874" height="223" key="GridCell.Tab.0.left" timestamp="1586438616758">
+    <state width="1874" height="333" key="GridCell.Tab.0.center/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586439766458" />
+    <state width="1874" height="333" key="GridCell.Tab.0.left" timestamp="1586439766457">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.0.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018348577" />
     <state width="1812" height="340" key="GridCell.Tab.0.left/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519328" />
-    <state width="1874" height="223" key="GridCell.Tab.0.left/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616758" />
-    <state width="1874" height="223" key="GridCell.Tab.0.right" timestamp="1586438616758">
+    <state width="1874" height="333" key="GridCell.Tab.0.left/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586439766457" />
+    <state width="1874" height="333" key="GridCell.Tab.0.right" timestamp="1586439766458">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.0.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018348577" />
     <state width="1812" height="340" key="GridCell.Tab.0.right/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519328" />
-    <state width="1874" height="223" key="GridCell.Tab.0.right/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616758" />
-    <state width="1874" height="223" key="GridCell.Tab.1.bottom" timestamp="1586438616668">
+    <state width="1874" height="333" key="GridCell.Tab.0.right/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586439766458" />
+    <state width="1874" height="333" key="GridCell.Tab.1.bottom" timestamp="1586439766340">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.1.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018348608" />
     <state width="1812" height="340" key="GridCell.Tab.1.bottom/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519246" />
-    <state width="1874" height="223" key="GridCell.Tab.1.bottom/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616668" />
-    <state width="1874" height="223" key="GridCell.Tab.1.center" timestamp="1586438616668">
+    <state width="1874" height="333" key="GridCell.Tab.1.bottom/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586439766340" />
+    <state width="1874" height="333" key="GridCell.Tab.1.center" timestamp="1586439766340">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.1.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018348608" />
     <state width="1812" height="340" key="GridCell.Tab.1.center/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519246" />
-    <state width="1874" height="223" key="GridCell.Tab.1.center/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616668" />
-    <state width="1874" height="223" key="GridCell.Tab.1.left" timestamp="1586438616668">
+    <state width="1874" height="333" key="GridCell.Tab.1.center/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586439766340" />
+    <state width="1874" height="333" key="GridCell.Tab.1.left" timestamp="1586439766340">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.1.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018348608" />
     <state width="1812" height="340" key="GridCell.Tab.1.left/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519246" />
-    <state width="1874" height="223" key="GridCell.Tab.1.left/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616668" />
-    <state width="1874" height="223" key="GridCell.Tab.1.right" timestamp="1586438616668">
+    <state width="1874" height="333" key="GridCell.Tab.1.left/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586439766340" />
+    <state width="1874" height="333" key="GridCell.Tab.1.right" timestamp="1586439766340">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.1.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018348608" />
     <state width="1812" height="340" key="GridCell.Tab.1.right/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519246" />
-    <state width="1874" height="223" key="GridCell.Tab.1.right/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616668" />
-    <state width="1874" height="223" key="GridCell.Tab.2.bottom" timestamp="1586438616668">
+    <state width="1874" height="333" key="GridCell.Tab.1.right/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586439766340" />
+    <state width="1874" height="263" key="GridCell.Tab.2.bottom" timestamp="1586438862443">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.2.bottom/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018346880" />
     <state width="1812" height="340" key="GridCell.Tab.2.bottom/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519246" />
-    <state width="1874" height="223" key="GridCell.Tab.2.bottom/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616668" />
-    <state width="1874" height="223" key="GridCell.Tab.2.center" timestamp="1586438616668">
+    <state width="1874" height="263" key="GridCell.Tab.2.bottom/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438862443" />
+    <state width="1874" height="263" key="GridCell.Tab.2.center" timestamp="1586438862443">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.2.center/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018346880" />
     <state width="1812" height="340" key="GridCell.Tab.2.center/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519246" />
-    <state width="1874" height="223" key="GridCell.Tab.2.center/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616668" />
-    <state width="1874" height="223" key="GridCell.Tab.2.left" timestamp="1586438616668">
+    <state width="1874" height="263" key="GridCell.Tab.2.center/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438862443" />
+    <state width="1874" height="263" key="GridCell.Tab.2.left" timestamp="1586438862443">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.2.left/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018346880" />
     <state width="1812" height="340" key="GridCell.Tab.2.left/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519246" />
-    <state width="1874" height="223" key="GridCell.Tab.2.left/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616668" />
-    <state width="1874" height="223" key="GridCell.Tab.2.right" timestamp="1586438616668">
+    <state width="1874" height="263" key="GridCell.Tab.2.left/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438862443" />
+    <state width="1874" height="263" key="GridCell.Tab.2.right" timestamp="1586438862443">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="351" key="GridCell.Tab.2.right/62.27.1858.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586018346880" />
     <state width="1812" height="340" key="GridCell.Tab.2.right/62.27.1858.1053/1920.0.1920.1080@62.27.1858.1053" timestamp="1585749519246" />
-    <state width="1874" height="223" key="GridCell.Tab.2.right/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438616668" />
+    <state width="1874" height="263" key="GridCell.Tab.2.right/63.27.1857.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586438862443" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1585612817886">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -462,23 +434,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/TestDoc.java</url>
-          <line>48</line>
+          <line>41</line>
           <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/TestDoc.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ExampleTest.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/br/com/store/order/application/messaging/ExampleTest.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

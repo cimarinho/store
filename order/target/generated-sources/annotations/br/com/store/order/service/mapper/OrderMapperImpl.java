@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-04-09T06:52:14-0300",
-    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_201 (Oracle Corporation)"
+    date = "2020-04-09T10:42:02-0300",
+    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 9.0.4 (Oracle Corporation)"
 )
 public class OrderMapperImpl implements OrderMapper {
 

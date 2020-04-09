@@ -4,15 +4,20 @@ spring:
   cloud:
     stream:
       bindings:
-        receive_order:
-          destination: receive_order
-          contentType: application/*+avro
-        create_order:
+        receive:
+          receive_order: receive_order
+          group: receive
+        create:
           destination: create_order
-          contentType: application/*+avro
-      schema:
-        avro:
-          schema-locations: classpath*:avro/order.avsc
+          group: create
+        saveLog:
+          destination: order_log
+          group: save
+      default:
+        consumer:
+          useNativeDencoding: true
+        producer:
+          useNativeEncoding: true
 #spring:
 #  cloud:
 #    stream:

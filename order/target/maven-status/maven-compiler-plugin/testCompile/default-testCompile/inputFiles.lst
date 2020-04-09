@@ -1,8 +1,4 @@
-/home/marcelo/projetos/store/order/src/test/java/br/com/store/order/application/messaging/mock/CustomKafkaAvroDeserializer.java
-/home/marcelo/projetos/store/order/src/test/java/br/com/store/order/application/messaging/mock/CustomKafkaAvroSerializer.java
 /home/marcelo/projetos/store/order/src/test/java/client/ProducerPaymentComple.java
 /home/marcelo/projetos/store/order/src/test/java/client/ProducerPaymentRefused.java
-/home/marcelo/projetos/store/order/src/test/java/br/com/store/order/application/messaging/OrderReceiveCreateTest.java
-/home/marcelo/projetos/store/order/src/test/java/br/com/store/order/application/messaging/type/IntegrationTest.java
-/home/marcelo/projetos/store/order/src/test/java/br/com/store/order/application/messaging/OrderInputTest.java
+/home/marcelo/projetos/store/order/src/test/java/br/com/store/order/application/messaging/TestDoc.java
 /home/marcelo/projetos/store/order/src/test/java/client/ProducerCreate.java
