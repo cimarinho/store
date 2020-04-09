@@ -1,0 +1,42 @@
+{
+    "type": "record",
+    "name": "OrderResponse",
+    "namespace": "br.com.store.order.application.request",
+    "fields": [
+        {
+            "name": "idOrder",
+            "type": "int"
+        },
+        {
+            "name": "totalPrice",
+            "type": "double"
+        },
+        {
+            "name": "orderDate",
+            "type": "string"
+        },
+        {
+            "name": "idClient",
+            "type": "string"
+        },
+        {
+            "name": "status",
+            "type": "string"
+        },
+        {
+            "name":"items",
+            "type":{
+                "type": "array",
+                "items":{
+                    "name":"OrderItemResponse",
+                    "type":"record",
+                    "fields":[
+                        {"name":"productName", "type":"string"},
+                        {"name":"price", "type":"double"}
+                    ]
+                }
+            }
+        }
+
+    ]
+}

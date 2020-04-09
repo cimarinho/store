@@ -1,2 +1,9 @@
-br/com/store/order/application/messaging/OrderSend.class
-br/com/store/order/application/messaging/Producer.class
+br/com/store/order/application/messaging/OrderReceiveCreateTest.class
+client/ProducerPaymentRefused.class
+client/ProducerCreate.class
+client/ProducerPaymentComple.class
+br/com/store/order/application/messaging/mock/CustomKafkaAvroSerializer.class
+br/com/store/order/application/messaging/mock/CustomKafkaAvroDeserializer.class
+br/com/store/order/application/messaging/OrderInputTest.class
+br/com/store/order/application/messaging/type/IntegrationTest.class
+br/com/store/order/application/messaging/mock/CustomKafkaAvroDeserializer$1.class

@@ -33,16 +33,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>io.confluent</groupId>-->
-<!--			<artifactId>kafka-avro-serializer</artifactId>-->
-<!--			<version>4.0.0</version>-->
-<!--		</dependency>-->
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -64,6 +55,16 @@
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-schema</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-schema-registry-client</artifactId>
 		</dependency>
 
 		<dependency>
@@ -99,7 +100,7 @@
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
@@ -107,12 +108,32 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-avro-serializer</artifactId>
+			<version>4.0.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-streams-avro-serde</artifactId>
+			<version>5.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.3.4.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
 
-<dependencyManagement>
+	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -151,27 +172,37 @@
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>org.apache.avro</groupId>-->
-<!--				<artifactId>avro-maven-plugin</artifactId>-->
-<!--				<version>1.8.2</version>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>schemas</id>-->
-<!--						<phase>generate-sources</phase>-->
-<!--						<goals>-->
-<!--							<goal>schema</goal>-->
-<!--							<goal>protocol</goal>-->
-<!--							<goal>idl-protocol</goal>-->
-<!--						</goals>-->
-<!--						<configuration>-->
-<!--							<sourceDirectory>${project.basedir}/src/main/resources/</sourceDirectory>-->
-<!--							<outputDirectory>${project.basedir}/src/main/java/</outputDirectory>-->
-<!--						</configuration>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--			</plugin>-->
+			<plugin>
+				<groupId>org.apache.avro</groupId>
+				<artifactId>avro-maven-plugin</artifactId>
+				<version>1.8.2</version>
+				<configuration>
+					<stringType>String</stringType>
+				</configuration>
+				<executions>
+					<execution>
+						<id>schemas</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>schema</goal>
+							<goal>protocol</goal>
+							<goal>idl-protocol</goal>
+						</goals>
+						<configuration>
+							<sourceDirectory>${project.basedir}/src/main/resources/avro/</sourceDirectory>
+							<outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>confluent</id>
+			<url>https://packages.confluent.io/maven/</url>
+		</repository>
+	</repositories>
 
 </project>

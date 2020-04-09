@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  kafka:
+    auto:
+      offset:
+        reset: earliest
+    consumer:
+      group-id: showcase-consumer-id
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        schema:
+          registry:
+            url: not-used
+      value-deserializer: br.com.store.order.application.messaging.mock.CustomKafkaAvroDeserializer
+    producer:
+      auto:
+        register:
+          schemas: true
+      group-id: showcase-producer-id
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+        schema:
+          registry:
+            url: not-used
+      value-serializer: br.com.store.order.application.messaging.mock.CustomKafkaAvroSerializer
+    properties:
+      specific:
+        avro:
+          reader: true
+  main:
+    allow-bean-definition-overriding: true

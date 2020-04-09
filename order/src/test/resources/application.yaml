@@ -1,0 +1,54 @@
+server:
+  port:8081
+spring:
+  cloud:
+    stream:
+      bindings:
+        receive_order:
+          destination: receive_order
+          contentType: application/*+avro
+        create_order:
+          destination: create_order
+          contentType: application/*+avro
+      schema:
+        avro:
+          schema-locations: classpath*:avro/order.avsc
+#spring:
+#  cloud:
+#    stream:
+#      schema:
+#        avro:
+#          dynamic-schema-generation-enabled: true
+#          schema-locations:
+#            - classpath:order-schema.avsc
+#  bindings:
+#    input:
+#      content-type: application/*+avro
+#    output:
+#      content-type: application/*+avro
+#  kafka:
+#    consumer:
+#      group-id: showcase-consumer-id
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      properties:
+#        schema:
+#          registry:
+#            url: not-used
+#      value-deserializer: br.com.store.order.application.messaging.mock.CustomKafkaAvroDeserializer
+#    producer:
+#      auto:
+#        register:
+#          schemas: true
+#      group-id: showcase-producer-id
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      properties:
+#        schema:
+#          registry:
+#            url: not-used
+#      value-serializer: br.com.store.order.application.messaging.mock.CustomKafkaAvroSerializer
+#    properties:
+#      specific:
+#        avro:
+#          reader: true
+#  main:
+#    allow-bean-definition-overriding: true
