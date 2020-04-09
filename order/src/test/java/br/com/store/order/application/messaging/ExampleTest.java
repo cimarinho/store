@@ -52,18 +52,18 @@ public class ExampleTest {
     }
 
 
-    @SpringBootApplication
-    @EnableBinding(OrderInput.class)
-    public static class MyProcessor {
-
-        @Autowired
-        private OrderInput channels;
-
-        @Transformer(inputChannel = OrderInput.RECEIVE, outputChannel = OrderInput.CREATE)
-        public Message<OrderRequest> transform(Message<OrderRequest> in) {
-            Message<OrderRequest> message = MessageBuilder.withPayload(in.getPayload())
-                    .build();
-            return message;
-        }
-    }
+//    @SpringBootApplication
+//    @EnableBinding(OrderInput.class)
+//    public static class MyProcessor {
+//
+//        @Autowired
+//        private OrderInput channels;
+//
+//        @Transformer(inputChannel = OrderInput.RECEIVE, outputChannel = OrderInput.CREATE)
+//        public Message<OrderRequest> transform(Message<OrderRequest> in) {
+//            Message<OrderRequest> message = MessageBuilder.withPayload(in.getPayload())
+//                    .build();
+//            return message;
+//        }
+//    }
 }

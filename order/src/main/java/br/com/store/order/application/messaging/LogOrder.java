@@ -13,7 +13,7 @@ import org.springframework.messaging.handler.annotation.Headers;
 public class LogOrder {
 
 
-    @StreamListener(OrderInput.SAVE_LOG)
+    @StreamListener(OrderInput.SAVELOG)
     public void completePayment(OrderRequest orderRequest, @Headers MessageHeaders headers) {
         log.info("ORDER_LOG = correlation_id["+headers.get("correlation_id")+"");
 

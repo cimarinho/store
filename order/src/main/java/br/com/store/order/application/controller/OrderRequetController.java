@@ -21,7 +21,7 @@ import java.util.Arrays;
 public class OrderRequetController {
 
     @Autowired
-    @Qualifier(value = "receive_order")
+    @Qualifier(value = "receive")
     MessageChannel messageChannel;
 
     @GetMapping

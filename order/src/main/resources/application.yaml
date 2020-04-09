@@ -9,16 +9,15 @@ spring:
           schema-locations:
             - classpath:order-response-schema.avsc
       bindings:
-        receive_order:
-          destination: receive_order
+        receive:
+          receive_order: receive_order
           group: receive
-        refused_payment:
-          destination: refused_payment
-          group: demokstream.org
-        input:
-          content-type: application/*+avro
-        output:
-          content-type: application/*+avro
+        create:
+          destination: create_order
+          group: create
+        saveLog:
+          destination: order_log
+          group: save
       default:
         consumer:
           useNativeDencoding: true

@@ -49,7 +49,7 @@ public class TestDoc  {
         System.out.println();
     }
 
-    @Test
+ //   @Test
     @SuppressWarnings("unchecked")
     public void teste() {
         Teste t= new Teste();t.setNome("FFFF");
