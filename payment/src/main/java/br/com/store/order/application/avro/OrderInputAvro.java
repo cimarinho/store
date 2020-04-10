@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 4802162071254262567L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"OrderInputAvro\",\"namespace\":\"br.com.store.order.application.avro\",\"fields\":[{\"name\":\"id\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"idOrder\",\"type\":\"int\"},{\"name\":\"totalPrice\",\"type\":\"double\"},{\"name\":\"orderDate\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"idClient\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"status\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"items\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"OrderInputItemAvro\",\"fields\":[{\"name\":\"productName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"price\",\"type\":\"double\"}]}}}]}");
+  private static final long serialVersionUID = 7705413476752231704L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"OrderInputAvro\",\"namespace\":\"br.com.store.order.application.avro\",\"fields\":[{\"name\":\"id\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"idOrder\",\"type\":\"int\"},{\"name\":\"totalPrice\",\"type\":\"double\"},{\"name\":\"orderDate\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"idClient\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"status\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"items\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"OrderInputItemAvro\",\"fields\":[{\"name\":\"productName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"price\",\"type\":\"double\"}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -56,7 +56,7 @@ public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase 
   @Deprecated public double totalPrice;
   @Deprecated public java.lang.String orderDate;
   @Deprecated public java.lang.String idClient;
-  @Deprecated public java.lang.Boolean status;
+  @Deprecated public java.lang.String status;
   @Deprecated public java.util.List<br.com.store.order.application.avro.OrderInputItemAvro> items;
 
   /**
@@ -76,7 +76,7 @@ public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase 
    * @param status The new value for status
    * @param items The new value for items
    */
-  public OrderInputAvro(java.lang.String id, java.lang.Integer idOrder, java.lang.Double totalPrice, java.lang.String orderDate, java.lang.String idClient, java.lang.Boolean status, java.util.List<br.com.store.order.application.avro.OrderInputItemAvro> items) {
+  public OrderInputAvro(java.lang.String id, java.lang.Integer idOrder, java.lang.Double totalPrice, java.lang.String orderDate, java.lang.String idClient, java.lang.String status, java.util.List<br.com.store.order.application.avro.OrderInputItemAvro> items) {
     this.id = id;
     this.idOrder = idOrder;
     this.totalPrice = totalPrice;
@@ -110,7 +110,7 @@ public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase 
     case 2: totalPrice = (java.lang.Double)value$; break;
     case 3: orderDate = (java.lang.String)value$; break;
     case 4: idClient = (java.lang.String)value$; break;
-    case 5: status = (java.lang.Boolean)value$; break;
+    case 5: status = (java.lang.String)value$; break;
     case 6: items = (java.util.List<br.com.store.order.application.avro.OrderInputItemAvro>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
@@ -200,7 +200,7 @@ public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase 
    * Gets the value of the 'status' field.
    * @return The value of the 'status' field.
    */
-  public java.lang.Boolean getStatus() {
+  public java.lang.String getStatus() {
     return status;
   }
 
@@ -208,7 +208,7 @@ public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase 
    * Sets the value of the 'status' field.
    * @param value the value to set.
    */
-  public void setStatus(java.lang.Boolean value) {
+  public void setStatus(java.lang.String value) {
     this.status = value;
   }
 
@@ -265,7 +265,7 @@ public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase 
     private double totalPrice;
     private java.lang.String orderDate;
     private java.lang.String idClient;
-    private java.lang.Boolean status;
+    private java.lang.String status;
     private java.util.List<br.com.store.order.application.avro.OrderInputItemAvro> items;
 
     /** Creates a new Builder */
@@ -542,7 +542,7 @@ public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase 
       * Gets the value of the 'status' field.
       * @return The value.
       */
-    public java.lang.Boolean getStatus() {
+    public java.lang.String getStatus() {
       return status;
     }
 
@@ -551,7 +551,7 @@ public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase 
       * @param value The value of 'status'.
       * @return This builder.
       */
-    public br.com.store.order.application.avro.OrderInputAvro.Builder setStatus(java.lang.Boolean value) {
+    public br.com.store.order.application.avro.OrderInputAvro.Builder setStatus(java.lang.String value) {
       validate(fields()[5], value);
       this.status = value;
       fieldSetFlags()[5] = true;
@@ -626,7 +626,7 @@ public class OrderInputAvro extends org.apache.avro.specific.SpecificRecordBase 
         record.totalPrice = fieldSetFlags()[2] ? this.totalPrice : (java.lang.Double) defaultValue(fields()[2]);
         record.orderDate = fieldSetFlags()[3] ? this.orderDate : (java.lang.String) defaultValue(fields()[3]);
         record.idClient = fieldSetFlags()[4] ? this.idClient : (java.lang.String) defaultValue(fields()[4]);
-        record.status = fieldSetFlags()[5] ? this.status : (java.lang.Boolean) defaultValue(fields()[5]);
+        record.status = fieldSetFlags()[5] ? this.status : (java.lang.String) defaultValue(fields()[5]);
         record.items = fieldSetFlags()[6] ? this.items : (java.util.List<br.com.store.order.application.avro.OrderInputItemAvro>) defaultValue(fields()[6]);
         return record;
       } catch (java.lang.Exception e) {

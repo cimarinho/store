@@ -25,7 +25,7 @@
         },
         {
             "name": "status",
-            "type": ["null", "boolean"],
+            "type": ["null", "string"],
             "default": null
         },
         {
