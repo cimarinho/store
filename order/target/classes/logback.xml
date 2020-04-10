@@ -11,7 +11,7 @@
 	</logger>
 
 	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
-		<file>/tmp/MEULOG/simulacao.log</file>
+		<file>/tmp/MEULOG/order.log</file>
 		<encoder>
 			<pattern>%msg%n</pattern>
 		</encoder>

@@ -1,11 +1,13 @@
 package client;
 
 
-import br.com.store.order.application.request.OrderItemRequest;
-import br.com.store.order.application.request.OrderRequest;
+import br.com.store.order.application.avro.OrderInputAvro;
+import br.com.store.order.application.avro.OrderInputItemAvro;
 import io.confluent.kafka.serializers.AbstractKafkaAvroSerDeConfig;
 import io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde;
-import org.apache.kafka.clients.producer.*;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsConfig;
 import org.slf4j.Logger;
@@ -41,19 +43,19 @@ public class ProducerCreate {
         properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, SpecificAvroSerde.class);
 
         // create the producer
-        KafkaProducer<String, OrderRequest> producer = new KafkaProducer<>(properties);
+        KafkaProducer<String, OrderInputAvro> producer = new KafkaProducer<>(properties);
 
-        OrderRequest r = new OrderRequest();
+        OrderInputAvro r = new OrderInputAvro();
         r.setIdClient("2121");
         r.setIdOrder(5);
         r.setOrderDate("2020-04-01");
         r.setTotalPrice(55.56);
-        OrderItemRequest i = new OrderItemRequest();
+        OrderInputItemAvro i = new OrderInputItemAvro();
         i.setPrice(4343.4);
         i.setProductName("PRODUTO");
         r.setItems(Arrays.asList(i));
         // create a producer record
-        ProducerRecord<String, OrderRequest> record;
+        ProducerRecord<String, OrderInputAvro> record;
         record = new ProducerRecord<>("receive_order",  r);
 //        record = new ProducerRecord<>("receive_order",  r);
 

@@ -1,0 +1,47 @@
+{
+    "type": "record",
+    "name": "OrderInputAvro",
+    "namespace": "br.com.store.order.application.avro",
+    "fields": [
+        {
+            "name": "id",
+            "type": "string"
+        },
+        {
+            "name": "idOrder",
+            "type": "int"
+        },
+        {
+            "name": "totalPrice",
+            "type": "double"
+        },
+        {
+            "name": "orderDate",
+            "type": "string"
+        },
+        {
+            "name": "idClient",
+            "type": "string"
+        },
+        {
+            "name": "status",
+            "type": ["null", "string"],
+            "default": null
+        },
+        {
+            "name":"items",
+            "type":{
+                "type": "array",
+                "items":{
+                    "name":"OrderInputItemAvro",
+                    "type":"record",
+                    "fields":[
+                        {"name":"productName", "type":"string"},
+                        {"name":"price", "type":"double"}
+                    ]
+                }
+            }
+        }
+
+    ]
+}

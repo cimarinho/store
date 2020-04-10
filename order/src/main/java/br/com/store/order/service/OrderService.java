@@ -1,13 +1,16 @@
 package br.com.store.order.service;
 
-import br.com.store.order.application.request.OrderRequest;
-import br.com.store.order.application.request.OrderResponse;
+import br.com.store.order.domain.entity.type.OrderErrorStatus;
+import br.com.store.order.service.model.OrderModel;
+import br.com.store.order.service.model.OrderModelResponse;
 
 public interface OrderService {
 
-    OrderResponse createOrder(OrderRequest request);
+    OrderModelResponse createOrder(OrderModel request);
 
-    OrderResponse completeOrder(OrderRequest request);
+    void updateOrder(OrderModel request);
 
-    OrderResponse paymentRefused(OrderRequest request);
+    void errorOrder(OrderModel request, OrderErrorStatus orderErrorStatus);
+
+    OrderModelResponse getOrder(String id);
 }

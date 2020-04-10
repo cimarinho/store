@@ -15,6 +15,9 @@ spring:
         create:
           destination: create_order
           group: create
+        update:
+          destination: update_order
+          group: update
         saveLog:
           destination: order_log
           group: save

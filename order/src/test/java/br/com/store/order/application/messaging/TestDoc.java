@@ -1,8 +1,8 @@
 package br.com.store.order.application.messaging;
 
+import br.com.store.order.application.avro.OrderInputAvro;
+import br.com.store.order.application.avro.OrderInputItemAvro;
 import br.com.store.order.application.messaging.interfaces.OrderInput;
-import br.com.store.order.application.request.OrderItemRequest;
-import br.com.store.order.application.request.OrderRequest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,9 @@ import org.springframework.cloud.stream.test.binder.MessageCollector;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.test.context.junit4.SpringRunner;
+
 import java.util.Arrays;
+
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
@@ -26,18 +28,18 @@ public class TestDoc  {
 
     @Test
     public void testWiring() {
-        OrderRequest r = new OrderRequest();
+        OrderInputAvro r = new OrderInputAvro();
         r.setIdClient("2121");
         r.setIdOrder(5);
         r.setOrderDate("2020-04-01");
         r.setTotalPrice(55.56);
-        OrderItemRequest i = new OrderItemRequest();
+        OrderInputItemAvro i = new OrderInputItemAvro();
         i.setPrice(4343.4);
         i.setProductName("PRODUTO");
         r.setItems(Arrays.asList(i));
-        Message<OrderRequest> message = new GenericMessage<OrderRequest>(r);
+        Message<OrderInputAvro> message = new GenericMessage<OrderInputAvro>(r);
         processor.receive().send(message);
-        Message<OrderRequest> received = (Message<OrderRequest>) messageCollector.forChannel(processor.create()).poll();
+        Message<OrderInputAvro> received = (Message<OrderInputAvro>) messageCollector.forChannel(processor.create()).poll();
 
         assertNotNull(received.getPayload());
     }

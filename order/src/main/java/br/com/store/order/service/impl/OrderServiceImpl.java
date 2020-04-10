@@ -1,16 +1,20 @@
 package br.com.store.order.service.impl;
 
-import br.com.store.order.application.request.OrderRequest;
-import br.com.store.order.application.request.OrderResponse;
-import br.com.store.order.domain.entity.LogDomain;
+
+import br.com.store.order.config.exception.DomainException;
 import br.com.store.order.domain.entity.OrderDomain;
-import br.com.store.order.domain.repository.MongoLogDomainRepository;
+import br.com.store.order.domain.entity.type.OrderErrorStatus;
 import br.com.store.order.domain.repository.MongoOrderDomainRepository;
 import br.com.store.order.service.OrderService;
 import br.com.store.order.service.mapper.OrderMapper;
+import br.com.store.order.service.model.OrderModel;
+import br.com.store.order.service.model.OrderModelResponse;
 import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class OrderServiceImpl  implements OrderService {
@@ -18,34 +22,38 @@ public class OrderServiceImpl  implements OrderService {
     @Autowired
     private MongoOrderDomainRepository orderRepository;
 
-    @Autowired
-    private MongoLogDomainRepository logRepository;
-
     private OrderMapper orderMapper = Mappers.getMapper(OrderMapper.class);
 
-    public OrderResponse createOrder(OrderRequest request) {
-        OrderDomain orderDomain = getOrderDomain(request).createOrder();
-        this.orderRepository.save(orderDomain);
-        return orderMapper.mapToResponse(orderDomain);
+    @Override
+    public OrderModelResponse createOrder(OrderModel orderModel) {
+        OrderDomain orderDomain = getOrderDomain(orderModel).createOrder();
+        OrderDomain save = this.orderRepository.save(orderDomain);
+        return this.orderMapper.mapToResponse(save);
     }
 
-    public OrderResponse completeOrder(OrderRequest request) {
-        OrderDomain orderDomain = getOrderDomain(request).completeOrder();
+    @Override
+    public void updateOrder(OrderModel orderModel) {
+        OrderDomain orderDomain = getOrderDomain(orderModel).updateOrder();
         this.orderRepository.save(orderDomain);
-        return orderMapper.mapToResponse(orderDomain);
 
     }
 
-    public OrderResponse paymentRefused(OrderRequest request) {
-        OrderDomain orderDomain = getOrderDomain(request).paymentRefused();
-        LogDomain logDomain = LogDomain.builder().idOrder(orderDomain.getIdOrder()).error("paymentRefused").build();
-        this.logRepository.save(logDomain);
+    @Override
+    public void errorOrder(OrderModel request, OrderErrorStatus orderErrorStatus ) {
+        OrderDomain orderDomain = getOrderDomain(request).error(orderErrorStatus);
         this.orderRepository.save(orderDomain);
-        return orderMapper.mapToResponse(orderDomain);
     }
 
-    OrderDomain getOrderDomain(OrderRequest request){
+    @Override
+    public OrderModelResponse getOrder(String id) {
+        Optional<OrderDomain> orderDomain = this.orderRepository.findById(id);
+        if (orderDomain.isPresent()){
+            return this.orderMapper.mapToResponse(orderDomain.get());
+        }
+        throw new DomainException("Id invalido");
+    }
+
+    private OrderDomain getOrderDomain(OrderModel request){
         return  orderMapper.mapToDomain(request);
     }
-
 }

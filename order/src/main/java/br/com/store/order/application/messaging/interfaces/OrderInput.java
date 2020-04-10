@@ -7,9 +7,10 @@ import org.springframework.messaging.SubscribableChannel;
 
 public interface OrderInput {
 
-    String RECEIVE = "receive";
-    String CREATE = "create";
-    String SAVELOG = "saveLog";
+    String RECEIVE = "receive_order";
+    String CREATE = "create_order";
+    String UPDATE = "update_order";
+    String ERROR_PAYMENT = "error_payment";
 
     @Input(RECEIVE)
     SubscribableChannel receive();
@@ -17,17 +18,11 @@ public interface OrderInput {
     @Output(CREATE)
     MessageChannel create();
 
-    @Input(SAVELOG)
-    SubscribableChannel saveLog();
+    @Input(UPDATE)
+    SubscribableChannel update();
 
-
-
-
-
-
-
-
-
+    @Input(ERROR_PAYMENT)
+    SubscribableChannel errorPayment();
 
 }
 

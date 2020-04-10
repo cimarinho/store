@@ -10,8 +10,11 @@ spring:
         create:
           destination: create_order
           group: create
-        saveLog:
-          destination: order_log
+        update:
+          destination: update_order
+          group: save
+        errorPayment:
+          destination: error_payment
           group: save
       default:
         consumer:
@@ -25,7 +28,7 @@ spring:
 #        avro:
 #          dynamic-schema-generation-enabled: true
 #          schema-locations:
-#            - classpath:order-schema.avsc
+#            - classpath:order-input.avsc
 #  bindings:
 #    input:
 #      content-type: application/*+avro
