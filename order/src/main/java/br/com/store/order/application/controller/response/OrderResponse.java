@@ -1,5 +1,6 @@
 package br.com.store.order.application.controller.response;
 
+import br.com.store.order.application.controller.interfaces.AbstractResponse;
 import br.com.store.order.service.model.OrderModelResponse;
 import lombok.Builder;
 import lombok.Getter;
@@ -9,7 +10,7 @@ import java.util.List;
 
 @Getter
 @Builder
-public class OrderResponse {
+public class OrderResponse extends AbstractResponse {
 
     private String id;
     private String idClient;
