@@ -1,6 +1,5 @@
 package br.com.store.order.service.impl;
 
-
 import br.com.store.order.config.exception.DomainException;
 import br.com.store.order.domain.entity.OrderDomain;
 import br.com.store.order.domain.entity.type.OrderErrorStatus;
@@ -12,9 +11,7 @@ import br.com.store.order.service.model.OrderModelResponse;
 import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class OrderServiceImpl  implements OrderService {
@@ -35,7 +32,6 @@ public class OrderServiceImpl  implements OrderService {
     public void updateOrder(OrderModel orderModel) {
         OrderDomain orderDomain = getOrderDomain(orderModel).updateOrder();
         this.orderRepository.save(orderDomain);
-
     }
 
     @Override

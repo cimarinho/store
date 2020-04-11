@@ -18,8 +18,8 @@ spring:
         update:
           destination: update_order
           group: update
-        saveLog:
-          destination: order_log
+        errorPayment:
+          destination: error_payment
           group: save
       default:
         consumer:

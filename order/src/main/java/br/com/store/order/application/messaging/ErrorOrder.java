@@ -25,7 +25,7 @@ public class ErrorOrder {
     private OrderService orderService;
 
     @StreamListener(OrderInput.ERROR_PAYMENT)
-    public void completePayment(Message<OrderInputAvro> orderSchema, @Headers MessageHeaders headers) {
+    public void completePayment(final Message<OrderInputAvro> orderSchema, @Headers MessageHeaders headers) {
         log.info("receive {} correlation_id {}.", orderSchema, headers.get("correlation_id"));
         final OrderModel orderModel = this.mapper.mapToRequest(orderSchema.getPayload());
         orderService.errorOrder(orderModel, OrderErrorStatus.PAYMENT);

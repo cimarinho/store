@@ -32,7 +32,6 @@ public class OrderDomain {
 
     private List<OrderItemDomain> items;
 
-
     public OrderDomain createOrder() {
         this.status = Status.CREATE.name();
         return this;

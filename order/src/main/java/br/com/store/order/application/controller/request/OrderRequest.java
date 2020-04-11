@@ -1,7 +1,6 @@
 package br.com.store.order.application.controller.request;
 
 import lombok.Getter;
-
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
@@ -12,7 +11,7 @@ import java.util.List;
 @Getter
 public class OrderRequest {
 
-   // @NotEmpty(message = "idclient é obrigatório")
+    @NotEmpty(message = "idclient é obrigatório")
     private String idClient;
     @NotNull(message = "idOrder é obrigatório")
     @Min(value = 1)
