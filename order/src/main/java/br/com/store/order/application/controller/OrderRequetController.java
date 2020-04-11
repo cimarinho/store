@@ -20,6 +20,7 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.UUID;
 
 @Slf4j
@@ -38,7 +39,7 @@ public class OrderRequetController implements AbstractController {
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    public HttpEntity<OrderCreateResponse> create(@RequestBody OrderRequest request) {
+    public HttpEntity<OrderCreateResponse> create(@RequestBody @Valid OrderRequest request) {
         String correlationId = UUID.randomUUID().toString();
         final OrderInputAvro orderSchema = this.mapper.mapToSchema(request, correlationId);
         messageChannel.send(MessageBuilder.withPayload(orderSchema).setHeader("correlation_id", correlationId).build());
