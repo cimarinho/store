@@ -7,8 +7,8 @@ import org.springframework.messaging.SubscribableChannel;
 
 public interface PaymentInput {
 
-    String RECEIVE = "create_order";
-    String CREATE = "update_order";
+    String RECEIVE = "receive";
+    String CREATE = "create";
 
     @Input(RECEIVE)
     SubscribableChannel receive();
