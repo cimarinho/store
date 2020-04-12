@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
 import javax.validation.ConstraintViolationException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,25 +21,25 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
 
     @ExceptionHandler(DomainException.class)
     public ResponseEntity<CustomErrorResponse> error(DomainException ex) {
-        return error(Arrays.asList(ex.getMessage()), ex);
+        return error(Arrays.asList(ex.getMessage()), ex, HttpStatus.BAD_REQUEST);
     }
 
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         List<String> errors = new ArrayList<>();
         ex.getBindingResult().getFieldErrors().stream().forEach(error-> errors.add(error.getField() + ": " + error.getDefaultMessage()));
-        return error(errors, ex);
+        return error(errors, ex, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler({ConstraintViolationException.class})
     public ResponseEntity<CustomErrorResponse> handleConstraintViolation(ConstraintViolationException ex, WebRequest request) {
         List<String> errors = new ArrayList<>();
         ex.getConstraintViolations().stream().forEach(error-> errors.add(error.getPropertyPath() + ": " + error.getMessage()));
-        return error(errors, ex);
+        return error(errors, ex, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler({Exception.class})
-    public ResponseEntity<CustomErrorResponse> handleConstraintViolation(Exception ex, WebRequest request) {
-        return error(Arrays.asList(ex.getMessage()), ex);
+    public ResponseEntity<CustomErrorResponse> error(Exception ex, WebRequest request) {
+        return error(Arrays.asList(ex.getMessage()), ex, HttpStatus.NOT_FOUND);
     }
 }

@@ -28,6 +28,5 @@ public class UpdateOrder {
         log.info("completePayment {} correlation_id {}.", orderSchema, headers.get("correlation_id"));
         final OrderModel orderModel = this.mapper.mapToRequest(orderSchema.getPayload());
         orderService.updateOrder(orderModel);
-
     }
 }

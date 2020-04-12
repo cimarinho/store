@@ -1,5 +1,6 @@
 package br.com.store.order.service.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -16,7 +17,7 @@ public class OrderModelResponse {
     private LocalDate orderDate;
     private Double totalPrice;
     private String status;
-    private List<OrderModelItemResponse> items;
+    private List<OrderModelResponse.OrderModelItemResponse> items;
 
     @Getter
     @Builder

@@ -1,14 +1,17 @@
 package br.com.store.order.application.controller.response;
 
 import br.com.store.order.application.controller.interfaces.AbstractResponse;
-import br.com.store.order.service.model.OrderModelResponse;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class OrderResponse extends AbstractResponse {
 
@@ -18,11 +21,13 @@ public class OrderResponse extends AbstractResponse {
     private LocalDate orderDate;
     private Double totalPrice;
     private String status;
-    private List<OrderModelResponse.OrderModelItemResponse> items;
+    private List<OrderResponse.OrderItemResponse> items;
 
     @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
     @Builder
-    public static class OrderModelItemResponse {
+    public static class OrderItemResponse {
 
         private String productName;
         private Double price;

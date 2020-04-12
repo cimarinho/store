@@ -1,5 +1,6 @@
 package br.com.store.order.application.controller.request;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
@@ -17,11 +18,13 @@ public class OrderRequest {
     @Min(value = 1)
     private Long idOrder;
     @NotNull(message = "orderDate é obrigatório")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate orderDate;
     @NotNull(message = "totalPrice é obrigatório")
     @Min(value = 1)
     private Double totalPrice;
     @Valid
+    @NotNull(message = "items é obrigatorio")
     private List<OrderItemRequest> items;
 
     @Getter

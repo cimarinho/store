@@ -8,13 +8,13 @@ import java.util.List;
 
 public interface CustomGlobalException {
 
-    default ResponseEntity error(List<String> error, Throwable message) {
+    default ResponseEntity error(List<String> error, Throwable message, HttpStatus status) {
         CustomErrorResponse errors = CustomErrorResponse.builder()
                 .timestamp(LocalDateTime.now())
                 .errors(error)
                 .message(message.getMessage())
                 .build();
-        return new ResponseEntity<>(errors, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errors, status);
 
     }
 
