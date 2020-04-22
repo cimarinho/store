@@ -1,3 +1,4 @@
+ 
 version: '2'
 
 services:
@@ -15,18 +16,3 @@ services:
       - 8081-8083:8081-8083       # REST Proxy, Schema Registry, Kafka Connect ports
       - 9581-9585:9581-9585       # JMX Ports
       - 9092:9092                 # Kafka Broker
-  mongo:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-
-  mongo-express:
-    image: mongo-express
-    restart: always
-    ports:
-      - 9081:9081
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: example

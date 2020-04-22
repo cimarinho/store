@@ -21,7 +21,4 @@ public class PaymentReceiveCreate {
         orderRequest.getPayload().setStatus("APPROVED_PAYMENT");
         return orderRequest;
     }
-
-
-
 }
