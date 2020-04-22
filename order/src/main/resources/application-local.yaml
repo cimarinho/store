@@ -28,6 +28,7 @@ spring:
           useNativeEncoding: true
       kafka:
         binder:
+          brokers: http://localhost:9092
           consumer-properties:
             key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
             schema.registry.url: http://localhost:8081

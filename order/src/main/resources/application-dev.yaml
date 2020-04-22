@@ -1,0 +1,57 @@
+server:
+  port: 8092
+spring:
+  cloud:
+    stream:
+      schema:
+        avro:
+          dynamic-schema-generation-enabled: true
+          schema-locations:
+            - classpath:order-response-schema.avsc
+      bindings:
+        receive:
+          receive_order: receive_order
+          group: receive
+        create:
+          destination: create_order
+          group: create
+        update:
+          destination: update_order
+          group: update
+        errorPayment:
+          destination: error_payment
+          group: save
+      default:
+        consumer:
+          useNativeDencoding: true
+        producer:
+          useNativeEncoding: true
+      kafka:
+        binder:
+          brokers: http://10.151.2.106:49092
+          consumer-properties:
+            key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            schema.registry.url: http://10.151.2.106:8081
+            value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+          producer-properties:
+            key.serializer: org.apache.kafka.common.serialization.StringSerializer
+            schema.registry.url: http://10.151.2.106:8081
+            value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+        streams:
+          binder:
+            brokers: http://10.151.2.106:8092
+            configuration:
+              schema.registry.url: http://10.151.2.106:8081
+              commit:
+                interval:
+                  ms: 1000
+              default:
+                key:
+                  serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+                value:
+                  serde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
+  data:
+    mongodb:
+      database: order
+      host: localhost
+      port: 27017

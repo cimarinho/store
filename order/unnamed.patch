@@ -1,0 +1,432 @@
+Index: docker-compose.yml
+===================================================================
+--- docker-compose.yml	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ docker-compose.yml	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
+@@ -1,32 +0,0 @@
+-version: '2'
+-
+-services:
+-  # this is our kafka cluster.
+-  kafka-cluster:
+-    image: landoop/fast-data-dev:latest
+-    environment:
+-      ADV_HOST: 127.0.0.1         # Change to 192.168.99.100 if using Docker Toolbox
+-      RUNTESTS: 0                 # Disable Running tests so the cluster starts faster
+-    volumes:
+-      - /var/cas:/tmp/cas
+-    ports:
+-      - 2181:2181                 # Zookeeper
+-      - 3030:3030                 # Landoop UI
+-      - 8081-8083:8081-8083       # REST Proxy, Schema Registry, Kafka Connect ports
+-      - 9581-9585:9581-9585       # JMX Ports
+-      - 9092:9092                 # Kafka Broker
+-  mongo:
+-    image: mongo
+-    restart: always
+-    environment:
+-      MONGO_INITDB_ROOT_USERNAME: root
+-      MONGO_INITDB_ROOT_PASSWORD: example
+-
+-  mongo-express:
+-    image: mongo-express
+-    restart: always
+-    ports:
+-      - 9081:9081
+-    environment:
+-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+-      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+\ No newline at end of file
+Index: payment/src/main/java/br/com/store/payment/application/messaging/PaymentReceiveCreate.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- payment/src/main/java/br/com/store/payment/application/messaging/PaymentReceiveCreate.java	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ payment/src/main/java/br/com/store/payment/application/messaging/PaymentReceiveCreate.java	(date 1587038215712)
+@@ -21,7 +21,4 @@
+         orderRequest.getPayload().setStatus("APPROVED_PAYMENT");
+         return orderRequest;
+     }
+-
+-
+-
+ }
+\ No newline at end of file
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .gitignore	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ .gitignore	(date 1587392032981)
+@@ -23,10 +23,11 @@
+ hs_err_pid*
+ 
+ #ide
++*.idea
+ .idea/
+ *.iml
+ .classpath
+ .project
+ .settings
+ .metadata
+-*target/
+\ No newline at end of file
++*target/
+Index: payment/src/main/java/br/com/store/payment/application/messaging/interfaces/PaymentInput.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- payment/src/main/java/br/com/store/payment/application/messaging/interfaces/PaymentInput.java	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ payment/src/main/java/br/com/store/payment/application/messaging/interfaces/PaymentInput.java	(date 1586986577934)
+@@ -26,5 +26,8 @@
+ 
+ 
+ 
++
++
++
+ }
+ 
+Index: order/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- order/.gitignore	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ order/.gitignore	(date 1587392020585)
+@@ -23,10 +23,11 @@
+ hs_err_pid*
+ 
+ #ide
++*.idea
+ .idea/
+ *.iml
+ .classpath
+ .project
+ .settings
+ .metadata
+-*target/
+\ No newline at end of file
++*target/
+Index: order/comando.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- order/comando.txt	(date 1586981681537)
++++ order/comando.txt	(date 1586981681537)
+@@ -0,0 +1,4 @@
++curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v1+json" --data '{
++   "value_schema": "{\"type\":\"record\",\"name\":\"OrderInputAvro\",\"namespace\":\"br.com.store.order.application.avro\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"idOrder\",\"type\":\"int\"},{\"name\":\"totalPrice\",\"type\":\"double\"},{\"name\":\"orderDate\",\"type\":\"string\"},{\"name\":\"idClient\",\"type\":\"string\"},{\"name\":\"status\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"items\",\"type\":{\"type\":\"array\",\"items\":{\"name\":\"OrderInputItemAvro\",\"type\":\"record\",\"fields\":[{\"name\":\"productName\",\"type\":\"string\"},{\"name\":\"price\",\"type\":\"double\"}]}}}]}",
++   "records": [{"value":{"id": "a1247494-b056-4c47-8e10-f297d03f415e","status":{"string":"CREATE"},"idClient":"21","idOrder": 7,"orderDate":"2019-04-09","totalPrice":7.1,"items":[{"productName":"jogo","price": 37.1}] } }]}' \
++   http://localhost:8082/topics/receive
+\ No newline at end of file
+Index: payment/src/main/resources/application.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- payment/src/main/resources/application.yaml	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ payment/src/main/resources/application.yaml	(date 1587143445945)
+@@ -22,6 +22,7 @@
+           useNativeEncoding: true
+       kafka:
+         binder:
++          brokers: http://localhost:9092
+           consumer-properties:
+             key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+             schema.registry.url: http://localhost:8081
+Index: order/src/main/java/br/com/store/order/application/controller/OrderRequetController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- order/src/main/java/br/com/store/order/application/controller/OrderRequetController.java	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ order/src/main/java/br/com/store/order/application/controller/OrderRequetController.java	(date 1587143469154)
+@@ -14,6 +14,7 @@
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.beans.factory.annotation.Qualifier;
+ import org.springframework.cloud.stream.annotation.EnableBinding;
++import org.springframework.cloud.stream.messaging.Processor;
+ import org.springframework.http.HttpStatus;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.messaging.MessageChannel;
+@@ -31,8 +32,7 @@
+     private OrderMapper mapper = Mappers.getMapper(OrderMapper.class);
+ 
+     @Autowired
+-    @Qualifier(value = OrderInput.RECEIVE)
+-    MessageChannel messageChannel;
++    OrderInput orderInput;
+ 
+     @Autowired
+     private OrderService orderService;
+@@ -42,7 +42,7 @@
+     public ResponseEntity<OrderCreateResponse> create(@RequestBody @Valid OrderRequest request) {
+         String correlationId = UUID.randomUUID().toString();
+         final OrderInputAvro orderSchema = this.mapper.mapToSchema(request, correlationId);
+-        messageChannel.send(MessageBuilder.withPayload(orderSchema).setHeader("correlation_id", correlationId).build());
++        orderInput.createReceive().send(MessageBuilder.withPayload(orderSchema).setHeader("correlation_id", correlationId).build());
+         return getOk(new OrderCreateResponse(correlationId));
+     }
+ 
+Index: order/src/main/java/br/com/store/order/application/messaging/interfaces/OrderInput.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- order/src/main/java/br/com/store/order/application/messaging/interfaces/OrderInput.java	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ order/src/main/java/br/com/store/order/application/messaging/interfaces/OrderInput.java	(date 1586992112700)
+@@ -1,14 +1,14 @@
+ package br.com.store.order.application.messaging.interfaces;
+ 
+-import br.com.store.order.application.avro.OrderInputAvro;
+ import org.springframework.cloud.stream.annotation.Input;
+ import org.springframework.cloud.stream.annotation.Output;
+-import org.springframework.messaging.Message;
+ import org.springframework.messaging.MessageChannel;
+ import org.springframework.messaging.SubscribableChannel;
+ 
+-public interface OrderInput {
++public interface OrderInput  {
+ 
++    String CREATE_RECEIVE = "receive";
++
+     String RECEIVE = "receive";
+     String CREATE = "create";
+     String UPDATE = "update";
+@@ -26,5 +26,8 @@
+     @Input(ERROR_PAYMENT)
+     SubscribableChannel errorPayment();
+ 
++    @Output(CREATE_RECEIVE)
++    SubscribableChannel createReceive();
++
+ }
+ 
+Index: order/src/main/java/br/com/store/order/config/OrderMessageChannel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- order/src/main/java/br/com/store/order/config/OrderMessageChannel.java	(date 1586989465200)
++++ order/src/main/java/br/com/store/order/config/OrderMessageChannel.java	(date 1586989465200)
+@@ -0,0 +1,34 @@
++package br.com.store.order.config;
++
++import br.com.store.order.application.avro.OrderInputAvro;
++import com.fasterxml.jackson.databind.ser.std.StringSerializer;
++import org.apache.kafka.clients.producer.ProducerConfig;
++import org.springframework.beans.factory.annotation.Value;
++import org.springframework.context.annotation.Bean;
++import org.springframework.kafka.core.DefaultKafkaProducerFactory;
++import org.springframework.kafka.core.KafkaTemplate;
++import org.springframework.kafka.core.ProducerFactory;
++
++import java.util.HashMap;
++import java.util.Map;
++
++public class OrderMessageChannel {
++//
++//    @Value("${kafka.bootstrap-servers}")
++//    private String bootstrapServers;
++//
++//    @Bean
++//    public Map<String, Object> producerConfigs() {
++//        Map<String, Object> props = new HashMap<>();
++//        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
++//        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
++//      //  props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, AvroSerializer.class);
++//
++//        return props;
++//    }
++//
++//    @Bean
++//    public ProducerFactory<String, OrderInputAvro> producerFactory() {
++//        return new DefaultKafkaProducerFactory<>(producerConfigs());
++//    }
++}
+Index: order/src/main/java/br/com/store/order/service/model/OrderModel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- order/src/main/java/br/com/store/order/service/model/OrderModel.java	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ order/src/main/java/br/com/store/order/service/model/OrderModel.java	(date 1586977740522)
+@@ -15,6 +15,8 @@
+     private Double totalPrice;
+     private List<OrderModelItem> items;
+ 
++    String h = "{\"type\":\"record\",\"name\":\"OrderInputAvro\", \"namespace\": \"br.com.store.order.application.avro\",    \"fields\": [        {            \"name\": \"id\",            \"type\": \"string\"        },        {            \"name\": \"idOrder\",            \"type\": \"int\"        },        {            \"name\": \"totalPrice\",            \"type\": \"double\"        },        {            \"name\": \"orderDate\",            \"type\": \"string\"        },        {            \"name\": \"idClient\",            \"type\": \"string\"        },        {            \"name\": \"status\",            \"type\": [\"null\", \"string\"],            \"default\": null        },        {            \"name\":\"items\",            \"type\":{                \"type\": \"array\",                \"items\":{                    \"name\":\"OrderInputItemAvro\",                    \"type\":\"record\",                    \"fields\":[                        {\"name\":\"productName\", \"type\":\"string\"},                        {\"name\":\"price\", \"type\":\"double\"}                    ]                }            }        }    ]}";
++
+     @Getter
+     @Builder
+     public static class OrderModelItem {
+Index: order/src/main/resources/application.yaml
+===================================================================
+--- order/src/main/resources/application.yaml	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ order/src/main/resources/application-dev.yaml	(date 1587391000420)
+@@ -28,19 +28,20 @@
+           useNativeEncoding: true
+       kafka:
+         binder:
++          brokers: http://10.151.2.106:49092
+           consumer-properties:
+             key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+-            schema.registry.url: http://localhost:8081
++            schema.registry.url: http://10.151.2.106:8081
+             value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+           producer-properties:
+             key.serializer: org.apache.kafka.common.serialization.StringSerializer
+-            schema.registry.url: http://localhost:8081
++            schema.registry.url: http://10.151.2.106:8081
+             value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+         streams:
+           binder:
+-            brokers: http://localhost:8092
++            brokers: http://10.151.2.106:8092
+             configuration:
+-              schema.registry.url: http://localhost:8081
++              schema.registry.url: http://10.151.2.106:8081
+               commit:
+                 interval:
+                   ms: 1000
+Index: order/src/main/resources/application-local.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- order/src/main/resources/application-local.yaml	(date 1587143046341)
++++ order/src/main/resources/application-local.yaml	(date 1587143046341)
+@@ -0,0 +1,57 @@
++server:
++  port: 8092
++spring:
++  cloud:
++    stream:
++      schema:
++        avro:
++          dynamic-schema-generation-enabled: true
++          schema-locations:
++            - classpath:order-response-schema.avsc
++      bindings:
++        receive:
++          receive_order: receive_order
++          group: receive
++        create:
++          destination: create_order
++          group: create
++        update:
++          destination: update_order
++          group: update
++        errorPayment:
++          destination: error_payment
++          group: save
++      default:
++        consumer:
++          useNativeDencoding: true
++        producer:
++          useNativeEncoding: true
++      kafka:
++        binder:
++          brokers: http://localhost:9092
++          consumer-properties:
++            key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
++            schema.registry.url: http://localhost:8081
++            value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
++          producer-properties:
++            key.serializer: org.apache.kafka.common.serialization.StringSerializer
++            schema.registry.url: http://localhost:8081
++            value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
++        streams:
++          binder:
++            brokers: http://localhost:8092
++            configuration:
++              schema.registry.url: http://localhost:8081
++              commit:
++                interval:
++                  ms: 1000
++              default:
++                key:
++                  serde: org.apache.kafka.common.serialization.Serdes$StringSerde
++                value:
++                  serde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
++  data:
++    mongodb:
++      database: order
++      host: localhost
++      port: 27017
+Index: payment/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- payment/pom.xml	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ payment/pom.xml	(date 1587037967489)
+@@ -11,10 +11,10 @@
+ 	</parent>
+ 
+ 	<groupId>br.com.store</groupId>
+-	<artifactId>order</artifactId>
++	<artifactId>payment</artifactId>
+ 	<version>0.0.1-SNAPSHOT</version>
+-	<name>order</name>
+-	<description>Demo jornada</description>
++	<name>payment</name>
++	<description>Demo payment</description>
+ 
+ 	<properties>
+ 		<java.version>1.8</java.version>
+Index: order/src/main/resources/avro/order-input.avsc
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- order/src/main/resources/avro/order-input.avsc	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ order/src/main/resources/avro/order-input.avsc	(date 1587065623804)
+@@ -3,17 +3,17 @@
+     "name": "OrderInputAvro",
+     "namespace": "br.com.store.order.application.avro",
+     "fields": [
+-        {
+-            "name": "id",
+-            "type": "string"
+-        },
++
+         {
+             "name": "idOrder",
+             "type": "int"
+         },
+         {
+             "name": "totalPrice",
+-            "type": "double"
++            "type": "double"        {
++                                        "name": "id",
++                                        "type": "string"
++                                    },
+         },
+         {
+             "name": "orderDate",
+Index: payment/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- payment/.gitignore	(revision 884f58c74b641189dd19e52a04aac82b633b038c)
++++ payment/.gitignore	(date 1587392044613)
+@@ -23,10 +23,11 @@
+ hs_err_pid*
+ 
+ #ide
++*.idea
+ .idea/
+ *.iml
+ .classpath
+ .project
+ .settings
+ .metadata
+-*target/
+\ No newline at end of file
++*target/

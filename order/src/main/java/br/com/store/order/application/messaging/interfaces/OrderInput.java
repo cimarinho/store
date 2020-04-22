@@ -1,13 +1,13 @@
 package br.com.store.order.application.messaging.interfaces;
 
-import br.com.store.order.application.avro.OrderInputAvro;
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.Output;
-import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;
 
-public interface OrderInput {
+public interface OrderInput  {
+
+    String CREATE_RECEIVE = "receive";
 
     String RECEIVE = "receive";
     String CREATE = "create";
@@ -25,6 +25,9 @@ public interface OrderInput {
 
     @Input(ERROR_PAYMENT)
     SubscribableChannel errorPayment();
+
+    @Output(CREATE_RECEIVE)
+    SubscribableChannel createReceive();
 
 }
 

@@ -14,6 +14,7 @@ import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.MessageChannel;
@@ -31,8 +32,7 @@ public class OrderRequetController implements AbstractController {
     private OrderMapper mapper = Mappers.getMapper(OrderMapper.class);
 
     @Autowired
-    @Qualifier(value = OrderInput.RECEIVE)
-    MessageChannel messageChannel;
+    OrderInput orderInput;
 
     @Autowired
     private OrderService orderService;
@@ -42,7 +42,7 @@ public class OrderRequetController implements AbstractController {
     public ResponseEntity<OrderCreateResponse> create(@RequestBody @Valid OrderRequest request) {
         String correlationId = UUID.randomUUID().toString();
         final OrderInputAvro orderSchema = this.mapper.mapToSchema(request, correlationId);
-        messageChannel.send(MessageBuilder.withPayload(orderSchema).setHeader("correlation_id", correlationId).build());
+        orderInput.createReceive().send(MessageBuilder.withPayload(orderSchema).setHeader("correlation_id", correlationId).build());
         return getOk(new OrderCreateResponse(correlationId));
     }
 
